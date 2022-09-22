@@ -1,8 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+// font is cormorant
+
+$background-color: #221f1f;
+$text-color: white;
+$secondary-coloring: #d3bea0;
+$secondary-bg-color: #3a3232;
+
+$primary-font:'Libre Baskerville', serif;
+
 * {
   margin: 0;
   padding: 0;
 }
 
-body {
-  background-color: aqua; // color for working purposes only, remove at end.
+// body {
+//   background-color: rgb(218, 246, 79); // color for working purposes only, remove at end.
+// }
+
+main {
+  margin: auto;
+  width: 390px;
+  background-color: $background-color;
+  color: $text-color;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-family: $primary-font;
 }
+
+// Main styling from here
+
+// *** nav styling start
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  color: white;
+  margin-top: 0;
+
+    .nav__largemenu {
+      display: none;
+    }
+
+    h1 {
+    font-size: 1rem;
+    }
+
+    .nav__namechange{
+      color: $secondary-coloring;
+    }
+
+}
+// *** nav styling end
+
+// *** intro styling start
+.intro {
+
+
+    .intro__headline h1 {
+      font-size: 3.6rem;
+    }
+
+    .intro__line{
+      border: 2px solid $secondary-coloring;
+      width: 96px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    .intro__text{
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+  
+}
+// *** intro styling end
+
+// *** MEDIA QUERY - TRIALS ***
+// PROBLEM - Can get mediamenu to vanish, but not bringing
+//           back to largemenu - Maybe try a grid lay out?
+@media only screen and (min-width: 768px) {
+  
+  main {
+    width: 725px;
+  }
+
+  .nav__mediamenu {
+    display: none;
+  }
+
+  .nav__largemenu {
+    display: flex;
+    flex-direction: row;
+  }
+  
+}
+// *** MEDIA QUERY - TRIALS ***
