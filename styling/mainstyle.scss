@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
 // font is cormorant
 
 $background-color: #221f1f;
@@ -7,16 +6,18 @@ $text-color: white;
 $secondary-coloring: #d3bea0;
 $secondary-bg-color: #3a3232;
 
-$primary-font:'Libre Baskerville', serif;
+$primary-font:'Cormorant', serif;
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-// body {
-//   background-color: rgb(218, 246, 79); // color for working purposes only, remove at end.
-// }
+body {
+  background-color: rgb(218, 246, 79); // color for working purposes only, remove at end.
+
+}
 
 main {
   margin: auto;
@@ -26,21 +27,24 @@ main {
   padding-left: 15px;
   padding-right: 15px;
   font-family: $primary-font;
+  font-size: 1.20rem;
 }
 
-// Main styling from here
+// Main page styling from here
 
 // *** nav styling start
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 3rem;
+  height: 5rem;
   color: white;
   margin-top: 0;
 
     .nav__largemenu {
       display: none;
+      justify-content: flex-end;
+      width: 400px;
     }
 
     h1 {
@@ -56,10 +60,11 @@ nav {
 
 // *** intro styling start
 .intro {
-
+    margin-top: 10px;
+    margin-bottom: 30px;
 
     .intro__headline h1 {
-      font-size: 3.6rem;
+      font-size: 3.8rem;
     }
 
     .intro__line{
@@ -70,7 +75,7 @@ nav {
     }
 
     .intro__text{
-      font-size: 1rem;
+      max-width: 500px;
       line-height: 1.2;
     }
 
@@ -79,22 +84,33 @@ nav {
 // *** intro styling end
 
 // *** MEDIA QUERY - TRIALS ***
-// PROBLEM - Can get mediamenu to vanish, but not bringing
-//           back to largemenu - Maybe try a grid lay out?
 @media only screen and (min-width: 768px) {
   
   main {
-    width: 725px;
+    width: 680px;
   }
-
-  .nav__mediamenu {
-    display: none;
-  }
-
-  .nav__largemenu {
+// >>> SEE NAV FOR MAKING FLEX VANISH & RETURN<<
+  nav {
     display: flex;
-    flex-direction: row;
-  }
+    justify-content: space-between;
+    align-items: center;
+      
+      .nav__largemenu {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+      }
+
+      .nav__mediamenu{
+        display: none;
+      }
   
+      // h1 {
+      // font-size: 1rem;
+      // }
+  
+
+  
+  }
 }
 // *** MEDIA QUERY - TRIALS ***
