@@ -17,7 +17,7 @@ $primary-font:'Cormorant', serif;
 }
 
 body {
-  background-color: rgb(218, 246, 79); // color for working purposes only, remove at end.
+  background-color: $background-color; // color for working purposes only, remove at end.
 
 }
 
@@ -139,6 +139,25 @@ nav {
 }
 // *** portfolio styling end
 
+// *** about styling begin
+.about {
+  padding-left: 15px;
+  padding-right: 15px;
+
+    .about__lineimg {
+      border: 1px solid $secondary-coloring;
+      width: 45px;
+    }
+}
+// *** about styling end
+
+// *** expANDint styling begin
+.expANDint {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+// *** expANDint styling end
+
 // *** subfooter styling start
 
 .subfooter {
@@ -204,7 +223,42 @@ footer {
 // *** footer styling end
 
 
+//***** COLLAPSIBLE
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
+.active, .collapsible:hover {
+  background-color: #555;
+}
+    
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: $secondary-bg-color;
+}
+//***** COLLAPSIBLE
 
 
 // *** MEDIA QUERY - TRIALS ***

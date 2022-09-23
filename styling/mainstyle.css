@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
@@ -7,7 +8,7 @@
 }
 
 body {
-  background-color: rgb(218, 246, 79);
+  background-color: #221f1f;
 }
 
 main {
@@ -98,6 +99,20 @@ nav .nav__namechange {
   margin-bottom: 35px;
 }
 
+.about {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.about .about__lineimg {
+  border: 1px solid #d3bea0;
+  width: 45px;
+}
+
+.expANDint {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .subfooter {
   margin-bottom: 50px;
 }
@@ -145,6 +160,41 @@ footer .footer__holder--img3 {
 }
 footer .footer__holder:hover {
   background-color: rgb(157, 157, 157);
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: "+";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "−";
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #3a3232;
 }
 
 @media only screen and (min-width: 768px) {
