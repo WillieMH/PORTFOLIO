@@ -26,8 +26,8 @@ main {
   width: 400px;
   background-color: $background-color;
   color: $text-color;
-  padding-left: 15px;
-  padding-right: 15px;
+  // padding-left: 15px;
+  // padding-right: 15px;
   font-family: $primary-font;
   font-size: 1.20rem;
 }
@@ -42,6 +42,8 @@ nav {
   height: 5rem;
   color: white;
   margin-top: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 
     .nav__largemenu {
       display: none;
@@ -60,10 +62,13 @@ nav {
 }
 // *** nav styling end
 
+
 // *** intro styling start
 .intro {
     margin-top: 10px;
     margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
 
     .intro__headline h1 {
       font-size: 3.8rem;
@@ -85,6 +90,7 @@ nav {
 }
 // *** intro styling end
 
+
 // *** portfolio styling start
 
 .portfolio {
@@ -93,13 +99,17 @@ nav {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
- 
+  padding-left: 15px;
+  padding-right: 15px;
 
   // all these are within portfolio__cardholders
+    .portfolio-img {
+      width: 350px;
+    }
+
     .portfolio__linkline {
       display: flex;
       justify-content: space-between;
-      width: 315px;
     }
 
     .portfolio__linklike-subflex {
@@ -111,17 +121,49 @@ nav {
     .portfolio__bottomline{
       display: flex;
       justify-content: flex-start;
+      margin-bottom: 35px;
     }
-  // all these are within portfolio__cardholders
-    .portfolio__cardholder5, .portfolio__cardholder6{
-      display: none;
-    }
-
-
 
 }
-
 // *** portfolio styling end
+
+// *** footer styling start
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: $secondary-bg-color;
+
+
+    .footer__holder {
+    width: 55px;
+    height: 55px;
+    background-color: #453f3f;
+    border-radius: 49px;
+    margin: 20px;
+  }
+
+    .footer__holder--img1{
+    padding-top: 13.5px;
+    padding-left: 13.5px;
+  }
+
+    .footer__holder--img2{
+    padding-top: 13.885px;
+    padding-left: 13.515px;
+  }
+
+    .footer__holder--img3{
+    padding-top: 19px;
+    padding-left: 12px;
+  }
+
+  .footer__holder:hover{
+    background-color: whitesmoke;
+  }
+}
+// *** footer styling end
 
 
 
@@ -150,6 +192,11 @@ nav {
         display: none;
       }
 
+  }
+
+  .portfolio__cardholder1, .portfolio__cardholder2, .portfolio__cardholder3, .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
+    margin-right: 5px;
+    margin-left: 5px;
   }
 }
 
