@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@ body {
 
 main {
   margin: auto;
-  width: 390px;
+  width: 400px;
   background-color: #221f1f;
   color: white;
   padding-left: 15px;
@@ -58,9 +59,51 @@ nav .nav__namechange {
   line-height: 1.2;
 }
 
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.portfolio .portfolio__linkline {
+  display: flex;
+  justify-content: space-between;
+  width: 315px;
+}
+.portfolio .portfolio__linklike-subflex {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+}
+.portfolio .portfolio__bottomline {
+  display: flex;
+  justify-content: flex-start;
+}
+.portfolio .portfolio__cardholder5, .portfolio .portfolio__cardholder6 {
+  display: none;
+}
+
 @media only screen and (min-width: 768px) {
   main {
-    width: 680px;
+    width: 760px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .nav__largemenu {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+  nav .nav__mediamenu {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    width: 1125px;
   }
   nav {
     display: flex;

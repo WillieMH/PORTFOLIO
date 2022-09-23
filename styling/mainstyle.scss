@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // font is cormorant
 
 $background-color: #221f1f;
@@ -7,6 +8,7 @@ $secondary-coloring: #d3bea0;
 $secondary-bg-color: #3a3232;
 
 $primary-font:'Cormorant', serif;
+// $primary-font:'Roboto', sans-serif;
 
 * {
   margin: 0;
@@ -21,7 +23,7 @@ body {
 
 main {
   margin: auto;
-  width: 390px;
+  width: 400px;
   background-color: $background-color;
   color: $text-color;
   padding-left: 15px;
@@ -83,11 +85,79 @@ nav {
 }
 // *** intro styling end
 
+// *** portfolio styling start
+
+.portfolio {
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+ 
+
+  // all these are within portfolio__cardholders
+    .portfolio__linkline {
+      display: flex;
+      justify-content: space-between;
+      width: 315px;
+    }
+
+    .portfolio__linklike-subflex {
+      display: flex;
+      justify-content: space-between;
+      width: 50px;
+    }
+
+    .portfolio__bottomline{
+      display: flex;
+      justify-content: flex-start;
+    }
+  // all these are within portfolio__cardholders
+    .portfolio__cardholder5, .portfolio__cardholder6{
+      display: none;
+    }
+
+
+
+}
+
+// *** portfolio styling end
+
+
+
+
+
 // *** MEDIA QUERY - TRIALS ***
+// MQ Phone to tablet
 @media only screen and (min-width: 768px) {
   
   main {
-    width: 680px;
+    width: 760px;
+  }
+    // >>> SEE NAV FOR MAKING FLEX VANISH & RETURN<<
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+      .nav__largemenu {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+      }
+
+      .nav__mediamenu{
+        display: none;
+      }
+
+  }
+}
+
+// MQ Tablet to PC
+@media only screen and (min-width: 1200px) {
+  
+  main {
+    width: 1125px;
   }
 // >>> SEE NAV FOR MAKING FLEX VANISH & RETURN<<
   nav {
@@ -104,12 +174,6 @@ nav {
       .nav__mediamenu{
         display: none;
       }
-  
-      // h1 {
-      // font-size: 1rem;
-      // }
-  
-
   
   }
 }
