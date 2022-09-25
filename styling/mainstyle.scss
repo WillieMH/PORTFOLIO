@@ -172,7 +172,7 @@ nav {
       font-size: 6rem;
     }
   }
-    .subfooter__div button {
+    button {
       width: 272px;
       height: 79px;
       background-color: $background-color;
@@ -191,6 +191,7 @@ footer {
   align-items: center;
   height: 100px;
   background-color: $secondary-bg-color;
+  width: 100%;
 
 
     .footer__holder {
@@ -225,19 +226,20 @@ footer {
 
 //***** COLLAPSIBLE
 .collapsible {
-  background-color: #777;
-  color: white;
+  background-color: $background-color;
+  color: $text-color;
   cursor: pointer;
-  padding: 18px;
+  padding: 10px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-family: $primary-font;
+  font-size: 1.25rem;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: $secondary-bg-color;
 }
     
 .collapsible:after {
@@ -253,7 +255,7 @@ footer {
 }
 
 .content {
-  padding: 0 18px;
+  padding: 0 10px 20px 20px;
   display: none;
   overflow: hidden;
   background-color: $secondary-bg-color;

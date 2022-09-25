@@ -124,7 +124,7 @@ nav .nav__namechange {
 .subfooter .subfooter__div h3 {
   font-size: 6rem;
 }
-.subfooter .subfooter__div button {
+.subfooter button {
   width: 272px;
   height: 79px;
   background-color: #221f1f;
@@ -138,6 +138,7 @@ footer {
   align-items: center;
   height: 100px;
   background-color: #3a3232;
+  width: 100%;
 }
 footer .footer__holder {
   width: 55px;
@@ -163,19 +164,20 @@ footer .footer__holder:hover {
 }
 
 .collapsible {
-  background-color: #777;
+  background-color: #221f1f;
   color: white;
   cursor: pointer;
-  padding: 18px;
+  padding: 10px;
   width: 100%;
   border: none;
   text-align: left;
   outline: none;
-  font-size: 15px;
+  font-family: "Cormorant", serif;
+  font-size: 1.25rem;
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: #3a3232;
 }
 
 .collapsible:after {
@@ -191,7 +193,7 @@ footer .footer__holder:hover {
 }
 
 .content {
-  padding: 0 18px;
+  padding: 0 10px 20px 20px;
   display: none;
   overflow: hidden;
   background-color: #3a3232;
