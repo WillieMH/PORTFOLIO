@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+body {
+  background-color: aqua;
+}
+
+main {
+  margin: auto;
+  width: 1125px;
+  background-color: #221f1f;
+  color: white;
+  font-family: "Cormorant", serif;
+  font-size: 1.2rem;
+}
+
+.portfolio-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+.portfolio-header div {
+  margin-right: 10px;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.portfolio .portfolio-img {
+  width: 350px;
+}
+.portfolio .portfolio__linkline {
+  display: flex;
+  justify-content: space-between;
+}
+.portfolio .portfolio__linklike-subflex {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+}
+.portfolio .portfolio__bottomline {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 1200px) {
+  main {
+    margin: auto;
+    width: 760px;
+    background-color: #221f1f;
+    color: white;
+    font-family: "Cormorant", serif;
+    font-size: 1.2rem;
+  }
+  .portfolio__cardholder5, .portfolio__cardholder6 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main {
+    margin: auto;
+    width: 400px;
+    background-color: #221f1f;
+    color: white;
+    font-family: "Cormorant", serif;
+    font-size: 1.2rem;
+  }
+  .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
+    display: none;
+  }
+}/*# sourceMappingURL=main.css.map */

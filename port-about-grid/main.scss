@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$background-color: #221f1f;
+$text-color: white;
+$secondary-coloring: #d3bea0;
+$secondary-bg-color: #3a3232;
+
+$primary-font:'Cormorant', serif;
+
+body {
+  background-color:aqua; // color for working purposes only, remove at end.
+}
+
+main {
+  margin: auto;
+  width: 1125px;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $primary-font;
+  font-size: 1.20rem;
+}
+
+// *** portfolio header styling start
+.portfolio-header {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+
+    div {
+      margin-right: 10px;
+    }
+}
+// *** portfolio header styling end
+
+
+// *** portfolio styling start
+.portfolio {
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  // all these are within portfolio__cardholders
+    .portfolio-img {
+      width: 350px;
+    }
+
+    .portfolio__linkline {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .portfolio__linklike-subflex {
+      display: flex;
+      justify-content: space-between;
+      width: 50px;
+    }
+
+    .portfolio__bottomline{
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 35px;
+    }
+
+}
+// *** portfolio styling end
+
+@media only screen and (max-width: 1200px) {
+  main {
+    margin: auto;
+    width: 760px;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $primary-font;
+    font-size: 1.20rem;
+  }
+  
+  .portfolio__cardholder5, .portfolio__cardholder6 {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  main {
+    margin: auto;
+    width: 400px;
+    background-color: $background-color;
+    color: $text-color;
+    font-family: $primary-font;
+    font-size: 1.20rem;
+  }
+
+  .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
+      display: none;
+    }
+}
