@@ -1,0 +1,62 @@
+// *** MEDIA QUERY - TRIALS ***
+// MQ Phone to tablet
+@media only screen and (min-width: 768px) {
+  
+  main {
+    width: 760px;
+  }
+    // >>> SEE NAV FOR MAKING FLEX VANISH & RETURN<<
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+      .nav__largemenu {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+      }
+
+      .nav__mediamenu{
+        display: none;
+      }
+
+
+
+  }
+
+  .portfolio__cardholder1, .portfolio__cardholder2, .portfolio__cardholder3, .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+
+// MQ Tablet to PC
+@media only screen and (min-width: 1200px) {
+  
+  main {
+    width: 1125px;
+  }
+// >>> SEE NAV FOR MAKING FLEX VANISH & RETURN<<
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+      
+      .nav__largemenu {
+        display: flex;
+        justify-content: space-between;
+        width: 300px;
+      }
+
+
+
+      .nav__mediamenu{
+        display: none;
+      }
+
+
+  
+  }
+}
+// *** MEDIA QUERY - TRIALS ***
