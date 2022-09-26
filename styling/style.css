@@ -1,6 +1,46 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@media only screen and (min-width: 768px) {
+  main {
+    width: 760px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .nav__largemenu {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+  nav .nav__mediamenu {
+    display: none;
+  }
+  .portfolio__cardholder1, .portfolio__cardholder2, .portfolio__cardholder3, .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  main {
+    width: 1125px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .nav__largemenu {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+  }
+  nav .nav__mediamenu {
+    display: none;
+  }
+}
 body {
   background-color: green;
 }
