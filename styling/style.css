@@ -1,54 +1,50 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cormorant&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@media only screen and (min-width: 768px) {
-  main {
-    width: 760px;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav .nav__largemenu {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-  }
-  nav .nav__mediamenu {
-    display: none;
-  }
-  .portfolio__cardholder1, .portfolio__cardholder2, .portfolio__cardholder3, .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
-    margin-right: 5px;
-    margin-left: 5px;
-  }
+.collapsible {
+  background-color: #221f1f;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: "Cormorant", serif;
+  font-size: 1.25rem;
 }
-@media only screen and (min-width: 1200px) {
-  main {
-    width: 1125px;
-  }
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  nav .nav__largemenu {
-    display: flex;
-    justify-content: space-between;
-    width: 300px;
-  }
-  nav .nav__mediamenu {
-    display: none;
-  }
+
+.active, .collapsible:hover {
+  background-color: #3a3232;
 }
-body {
-  background-color: green;
+
+.collapsible:after {
+  content: "+";
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "−";
+}
+
+.content {
+  padding: 0 10px 20px 20px;
+  display: none;
+  overflow: hidden;
+  background-color: #3a3232;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: #221f1f;
 }
 
 main {
@@ -254,42 +250,6 @@ footer .footer__holder:hover {
   background-color: rgb(157, 157, 157);
 }
 
-.collapsible {
-  background-color: #221f1f;
-  color: white;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-family: "Cormorant", serif;
-  font-size: 1.25rem;
-}
-
-.active, .collapsible:hover {
-  background-color: #3a3232;
-}
-
-.collapsible:after {
-  content: "+";
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "−";
-}
-
-.content {
-  padding: 0 10px 20px 20px;
-  display: none;
-  overflow: hidden;
-  background-color: #3a3232;
-}
-
 @media only screen and (min-width: 768px) {
   main {
     width: 760px;
@@ -327,6 +287,16 @@ footer .footer__holder:hover {
     width: 300px;
   }
   nav .nav__mediamenu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .portfolio__cardholder5, .portfolio__cardholder6 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
     display: none;
   }
 }/*# sourceMappingURL=style.css.map */

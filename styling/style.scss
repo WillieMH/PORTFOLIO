@@ -1,20 +1,51 @@
-@use "./colors" as *;
-@use "./mediaqueries" as *;
-
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-// font is cormorant
 
-
-
-body {
-  background-color:green; // color for working purposes only, remove at end.
-}
-
-
+$background-color: #221f1f;
+$text-color: white;
+$secondary-coloring: #d3bea0;
+$secondary-bg-color: #3a3232;
 
 $primary-font:'Cormorant', serif;
-// $primary-font:'Roboto', sans-serif;
+
+
+//***** COLLAPSIBLE
+.collapsible {
+  background-color: $background-color;
+  color: $text-color;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-family: $primary-font;
+  font-size: 1.25rem;
+}
+
+.active, .collapsible:hover {
+  background-color: $secondary-bg-color;
+}
+    
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 10px 20px 20px;
+  display: none;
+  overflow: hidden;
+  background-color: $secondary-bg-color;
+}
+//***** COLLAPSIBLE
 
 * {
   margin: 0;
@@ -22,15 +53,15 @@ $primary-font:'Cormorant', serif;
   box-sizing: border-box;
 }
 
-
+body {
+  background-color:$background-color; // color for working purposes only, remove at end.
+}
 
 main {
   margin: auto;
   width: 400px;
   background-color: $background-color;
   color: $text-color;
-  // padding-left: 15px;
-  // padding-right: 15px;
   font-family: $primary-font;
   font-size: 1.20rem;
 }
@@ -130,6 +161,7 @@ nav {
 }
 // *** intro styling end
 
+
 // *** portfolio header styling start
 .portfolio-header {
   padding-left: 15px;
@@ -143,6 +175,7 @@ nav {
     }
 }
 // *** portfolio header styling end
+
 
 // *** portfolio styling start
 .portfolio {
@@ -179,6 +212,7 @@ nav {
 }
 // *** portfolio styling end
 
+
 // *** about styling begin
 .about {
   padding-left: 15px;
@@ -204,6 +238,7 @@ nav {
 }
 // *** about styling end
 
+
 // *** expANDint styling begin
 .expANDint {
   padding-left: 15px;
@@ -221,7 +256,6 @@ nav {
 // *** expANDint styling end
 
 // *** subfooter styling start
-
 .subfooter {
   margin-bottom: 50px;
 
@@ -286,53 +320,14 @@ footer {
 // *** footer styling end
 
 
-//***** COLLAPSIBLE
-.collapsible {
-  background-color: $background-color;
-  color: $text-color;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-family: $primary-font;
-  font-size: 1.25rem;
-}
 
-.active, .collapsible:hover {
-  background-color: $secondary-bg-color;
-}
-    
-.collapsible:after {
-  content: '\002B';
-  color: white;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: "\2212";
-}
-
-.content {
-  padding: 0 10px 20px 20px;
-  display: none;
-  overflow: hidden;
-  background-color: $secondary-bg-color;
-}
-//***** COLLAPSIBLE
-
-
-// *** MEDIA QUERY - TRIALS ***
+// *** MEDIA QUERY ***
 // MQ Phone to tablet
 @media only screen and (min-width: 768px) {
-  
   main {
     width: 760px;
   }
-    // >>> SEE NAV FOR MAKING FLEX VANISH & RETURN<<
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -347,8 +342,6 @@ footer {
       .nav__mediamenu{
         display: none;
       }
-
-
 
   }
 
@@ -364,7 +357,7 @@ footer {
   main {
     width: 1125px;
   }
-// >>> SEE NAV FOR MAKING FLEX VANISH & RETURN<<
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -376,14 +369,23 @@ footer {
         width: 300px;
       }
 
-
-
       .nav__mediamenu{
         display: none;
       }
-
-
-  
   }
 }
-// // *** MEDIA QUERY - TRIALS ***
+
+
+@media only screen and (max-width: 1200px) {
+
+  .portfolio__cardholder5, .portfolio__cardholder6 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
+      display: none;
+    }
+}
