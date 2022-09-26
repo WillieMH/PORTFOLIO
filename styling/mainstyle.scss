@@ -17,7 +17,7 @@ $primary-font:'Cormorant', serif;
 }
 
 body {
-  background-color: $background-color; // color for working purposes only, remove at end.
+  background-color: whitesmoke; // color for working purposes only, remove at end.
 
 }
 
@@ -39,7 +39,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 3rem;
   color: white;
   margin-top: 0;
   padding-left: 15px;
@@ -49,6 +49,15 @@ nav {
       display: none;
       justify-content: flex-end;
       width: 400px;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $secondary-coloring;
+      }
     }
 
     h1 {
@@ -59,6 +68,34 @@ nav {
       color: $secondary-coloring;
     }
 
+    .nav__mediamenu {
+      position: relative;
+      display: inline-block;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $secondary-coloring;
+      }
+    }
+    
+    .nav__mediamenu--dropdown {
+      display: none;
+      position: absolute;
+      background-color: $secondary-bg-color;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      line-height: 2;
+      z-index: 1;
+    }
+    
+    .nav__mediamenu:hover .nav__mediamenu--dropdown {
+      display: block;
+    }
 }
 // *** nav styling end
 
@@ -143,10 +180,23 @@ nav {
 .about {
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  flex-direction: column;
 
     .about__lineimg {
       border: 1px solid $secondary-coloring;
       width: 45px;
+    }
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 330px;
+      height: auto;
+      text-align: center;
     }
 }
 // *** about styling end
@@ -155,6 +205,15 @@ nav {
 .expANDint {
   padding-left: 15px;
   padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .experience, .interests {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 400px;
+  }
 }
 // *** expANDint styling end
 
@@ -286,6 +345,8 @@ footer {
         display: none;
       }
 
+
+
   }
 
   .portfolio__cardholder1, .portfolio__cardholder2, .portfolio__cardholder3, .portfolio__cardholder4, .portfolio__cardholder5, .portfolio__cardholder6 {
@@ -312,9 +373,13 @@ footer {
         width: 300px;
       }
 
+
+
       .nav__mediamenu{
         display: none;
       }
+
+
   
   }
 }

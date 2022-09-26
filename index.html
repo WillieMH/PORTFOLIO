@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styling/mainstyle.css">
+  <link rel="stylesheet" href="./styling/mainstyle.css">
   <title>Willie Henderson - Portfolio</title>
 </head>
 
@@ -19,13 +19,18 @@
       </div>
 
       <div class="nav__largemenu">
-        <div>About</div>
-        <div>Portfolio</div>
-        <div>Contact</div>
+        <div><a href="#aboutLink">About</a></div>
+        <div><a href="#portfolioLink">Portfolio</a></div>
+        <div><a href="#contactLink">Contact</a></div>
       </div>
 
       <div class=nav__mediamenu>
-        <div>Burger Nav</div>
+        <div><img src="/assets/bbmenu-icon.png" alt=""></div>
+        <div class="nav__mediamenu--dropdown">
+          <div><a href="#aboutLink">About</a></div>
+          <div><a href="#portfolioLink">Portfolio</a></div>
+          <div><a href="#contactLink">Contact</a></div>
+        </div>
       </div>
 
 
@@ -45,7 +50,7 @@
       </div>
     </div>
 
-    <div class="portfolio-header">
+    <div id="portfolioLink" class="portfolio-header">
       <div>
         <h1>PORTFOLIO</h1>
       </div>
@@ -194,13 +199,13 @@
 
     </div>
 
-    <div class="about">
+    <div id="aboutLink" class="about">
 
       <div>
         <h2>ABOUT</h2>
       </div>
       <div class="about__lineimg"></div> <!-- Space Reserved for line image only-->
-      <div><img src="" alt="Personal Picture"></div>
+      <div><img src="/assets/photo-placeholder.png" alt="Personal Picture"></div>
       <div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, quos facere. Excepturi aliquid nam
           iusto
@@ -282,12 +287,10 @@
 
     <div class="subfooter">
       <div class="subfooter__div">
-        <h3>Get in Touch.</h3>
+        <h3  id="contactLink" >Get in Touch.</h3>
       </div>
       <div class="subfooter__div"><button>CONTACT</button></div>
     </div>
-
-
 
   </main>
 
