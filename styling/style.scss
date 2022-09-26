@@ -1,13 +1,16 @@
+@use "./colors" as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 // font is cormorant
 
 
 
-$background-color: #221f1f;
-$text-color: white;
-$secondary-coloring: #d3bea0;
-$secondary-bg-color: #3a3232;
+body {
+  background-color:green; // color for working purposes only, remove at end.
+}
+
+
 
 $primary-font:'Cormorant', serif;
 // $primary-font:'Roboto', sans-serif;
@@ -18,10 +21,7 @@ $primary-font:'Cormorant', serif;
   box-sizing: border-box;
 }
 
-body {
-  background-color: whitesmoke; // color for working purposes only, remove at end.
 
-}
 
 main {
   margin: auto;
